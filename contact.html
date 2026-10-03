@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book a Free Call | Nexa Lead</title>
+<meta name="description" content="Book a free call with Nexa Lead, a Wichita business helping local service companies grow.">
+<meta name="theme-color" content="#0f1512">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='346 254 560 560'%3E%3Cpath fill='%232fbf86' d='M406 264V744H485V404L707 544V456Z'/%3E%3Cpath fill='%23fff' d='M765 328V651L545 511V600L847 803V328Z'/%3E%3C/svg%3E">
+<style>
+:root{
+  --bg:#0f1512;--card:#17201b;--line:#27352d;
+  --ink:#eaf1ec;--muted:#9bb0a3;--brand:#2fbf86;--brand-ink:#06150e;--accent:#f2b134;
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;min-height:100vh;background:var(--bg);background-image:radial-gradient(700px 360px at 50% -10%,rgba(47,191,134,.18),transparent 65%);background-repeat:no-repeat;color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:560px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;padding:20px 0}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:18px;text-decoration:none}
+.logo svg{height:34px;width:auto;display:block}
+.logo b{color:#fff;font-weight:800}
+.logo span{color:var(--brand)}
+.back{color:var(--muted);font-size:14px;text-decoration:none}
+.back:hover{color:var(--ink)}
+.eyebrow{display:inline-block;border:1px solid var(--line);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:13px;margin:22px 0 14px}
+h1{font-size:clamp(32px,8vw,44px);line-height:1.08;letter-spacing:-.03em;margin:0 0 12px}
+h1 em{font-style:normal;color:var(--brand)}
+.lead{color:var(--muted);font-size:17px;margin:0 0 22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 4px}
+label:first-of-type{margin-top:0}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px}
+.btn{display:block;width:100%;margin-top:16px;padding:14px 22px;border-radius:12px;font-weight:700;font-size:16px;border:1px solid var(--brand);background:var(--brand);color:var(--brand-ink);cursor:pointer;font-family:inherit}
+.msg{margin-top:14px;padding:12px 14px;border-radius:10px;border:1px solid var(--brand);font-size:14px}
+.msg.err{border-color:#ff8a80;color:#ff8a80}
+.hp{position:absolute;left:-9999px}
+.trust{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin:20px 0 0;color:var(--muted);font-size:14px}
+.trust span::before{content:"\2713\00a0";color:var(--brand);font-weight:700}
+footer{padding:34px 0 40px;color:var(--muted);font-size:13px;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <a class="logo" href="index.html" aria-label="Nexa Lead home"><svg viewBox="396 254 462 560" aria-hidden="true"><path fill="#2fbf86" d="M406 264V744H485V404L707 544V456Z"/><path fill="#fff" d="M765 328V651L545 511V600L847 803V328Z"/></svg><span>NEXA</span> <b>LEAD</b></a>
+    <a class="back" href="index.html">Visit website &rarr;</a>
+  </div>
+
+  <span class="eyebrow">Free call, no obligation</span>
+  <h1>Book a <em>free call</em></h1>
+  <p class="lead">Tell us a little about your business and we will reach out to set up a short call about how we can help you grow.</p>
+
+  <form class="card" id="form" novalidate>
+    <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <label for="f_name">Your name</label>
+    <input id="f_name" name="name" autocomplete="name" required>
+    <label for="f_biz">Business name</label>
+    <input id="f_biz" name="business" required>
+    <label for="f_phone">Phone</label>
+    <input id="f_phone" name="phone" type="tel" autocomplete="tel" required>
+    <label for="f_trade">Type of business</label>
+    <select id="f_trade" name="trade">
+      <option>Roofing</option><option>HVAC</option><option>Plumbing</option><option>Electrical</option><option>Landscaping</option><option>Other</option>
+    </select>
+    <label for="f_msg">Anything we should know? (optional)</label>
+    <textarea id="f_msg" name="message"></textarea>
+    <button class="btn" type="submit" id="f_btn">Book my free call</button>
+    <div id="f_out"></div>
+  </form>
+
+  <div class="trust">
+    <span>Local to Wichita</span>
+    <span>No long contracts</span>
+    <span>Set up for you</span>
+  </div>
+
+  <footer>&copy; <span id="yr"></span> Nexa Lead. Wichita, KS. &middot; <a href="privacy.html">Privacy Policy</a></footer>
+</div>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* SETUP: paste your Formspree endpoint here (https://formspree.io/f/xxxx) to receive submissions by email.
+     If left as is, the form opens an email draft instead. */
+  var FORM_ENDPOINT='';
+  var FALLBACK_EMAIL='you@nexalead.com';
+
+  var form=document.getElementById('form'),out=document.getElementById('f_out'),btn=document.getElementById('f_btn');
+  function show(ok,t){out.innerHTML='';var d=document.createElement('div');d.className='msg'+(ok?'':' err');d.textContent=t;out.appendChild(d)}
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var fd=new FormData(form);
+    if(fd.get('company_website')){return}
+    var name=(fd.get('name')||'').trim(),biz=(fd.get('business')||'').trim(),phone=(fd.get('phone')||'').trim();
+    if(!name||!biz||!phone){return show(false,'Please add your name, business, and phone number.')}
+    if(FORM_ENDPOINT){
+      btn.disabled=true;
+      fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+        .then(function(r){if(!r.ok)throw 0;show(true,'Thanks, '+name+'. We will reach out shortly.');form.reset()})
+        .catch(function(){show(false,'Something went wrong. Please call or email us directly.')})
+        .then(function(){btn.disabled=false});
+    }else{
+      var body='Name: '+name+'\nBusiness: '+biz+'\nPhone: '+phone+'\nType: '+fd.get('trade')+'\n\n'+(fd.get('message')||'');
+      window.location.href='mailto:'+FALLBACK_EMAIL+'?subject='+encodeURIComponent('Call request: '+biz)+'&body='+encodeURIComponent(body);
+      show(true,'Your email app should open with your request ready to send.');
+    }
+  });
+})();
+</script>
+</body>
+</html>
