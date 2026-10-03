@@ -311,8 +311,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
       <h2>Book a call for more information</h2>
       <p class="sec-sub">Tell us about your business and we will reach out to set up a short call. No pressure, no obligation.</p>
       <ul class="list">
-        <li><b>Phone:</b> <a href="tel:+1YOURNUMBER">YOUR PHONE NUMBER</a></li>
-        <li><b>Email:</b> <a href="mailto:you@nexalead.com">you@nexalead.com</a></li>
         <li><b>Based in:</b> Wichita, Kansas</li>
       </ul>
     </div>
@@ -366,7 +364,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
       btn.disabled=true;
       fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
         .then(function(r){if(!r.ok)throw 0;show(true,'Thanks, '+name+'. We will reach out shortly.');form.reset()})
-        .catch(function(){show(false,'Something went wrong. Please call or email us directly.')})
+        .catch(function(){show(false,'Something went wrong. Please try again in a moment.')})
         .then(function(){btn.disabled=false});
     }else{
       var body='Name: '+name+'\nBusiness: '+biz+'\nPhone: '+phone+'\nType: '+fd.get('trade')+'\n\n'+(fd.get('message')||'');
