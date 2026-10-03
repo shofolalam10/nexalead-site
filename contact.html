@@ -103,7 +103,7 @@ footer{padding:34px 0 40px;color:var(--muted);font-size:13px;text-align:center}
       btn.disabled=true;
       fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
         .then(function(r){if(!r.ok)throw 0;show(true,'Thanks, '+name+'. We will reach out shortly.');form.reset()})
-        .catch(function(){show(false,'Something went wrong. Please call or email us directly.')})
+        .catch(function(){show(false,'Something went wrong. Please try again in a moment.')})
         .then(function(){btn.disabled=false});
     }else{
       var body='Name: '+name+'\nBusiness: '+biz+'\nPhone: '+phone+'\nType: '+fd.get('trade')+'\n\n'+(fd.get('message')||'');
