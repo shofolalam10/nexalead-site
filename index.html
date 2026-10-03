@@ -74,6 +74,16 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-o
 .list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
 .list li{color:var(--muted)}
 .list li b{color:var(--ink)}
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:16px}
+@media(max-width:980px){.price-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.price-grid{grid-template-columns:1fr}}
+.tier{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--brand)}
+.amt{font-size:32px;font-weight:800;letter-spacing:-.02em;margin:6px 0 2px}
+.amt span{font-size:14px;color:var(--muted);font-weight:500;letter-spacing:0}
+.was{color:var(--muted);font-size:13px}
+.plan .list{gap:8px;font-size:14px;margin-top:14px}
+.plan .list li::before{content:"\2713\00a0";color:var(--brand);font-weight:700}
+.note{color:var(--muted);font-size:14px;margin:0 0 26px}
 footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 </style>
@@ -86,6 +96,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
     <div class="links">
       <a class="t" href="#services">Services</a>
       <a class="t" href="#how">How it works</a>
+      <a class="t" href="#pricing">Pricing</a>
       <a class="t" href="#faq">FAQ</a>
       <a class="cta" href="#contact">Book a free call</a>
     </div>
@@ -148,10 +159,59 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
   </div>
 </section>
 
-<section class="alt">
+<section id="pricing" class="alt">
   <div class="wrap">
     <h2>Founding Wichita client pricing</h2>
-    <p class="sec-sub">We are opening a small number of spots at lower founding rates for local businesses. Book a call and we will give you the exact numbers for your trade.</p>
+    <p class="sec-sub">We are opening a small number of spots at lower founding rates for local businesses. Flat fees and no long contracts.</p>
+    <div class="price-grid">
+      <div class="card plan hot">
+        <span class="badge">MOST POPULAR</span>
+        <div class="tier">AI Front Desk</div>
+        <div class="amt">$497<span> /mo</span></div>
+        <div class="was">+ $997 one-time setup. Normally $697/mo + $1,500.</div>
+        <ul class="list">
+          <li>24/7 AI receptionist on your line</li>
+          <li>Appointment booking to your calendar</li>
+          <li>60-second web-lead text-back</li>
+          <li>Urgent-call forwarding and call logs</li>
+          <li>Ongoing tuning and support</li>
+        </ul>
+      </div>
+      <div class="card plan">
+        <div class="tier">Website build</div>
+        <div class="amt">$997<span> one-time</span></div>
+        <div class="was">5-7 page site, built for calls and quote requests</div>
+        <ul class="list">
+          <li>Custom design, not a template</li>
+          <li>Built for mobile and page speed</li>
+          <li>Forms wired straight to your phone or inbox</li>
+          <li>Google Business Profile set up</li>
+        </ul>
+      </div>
+      <div class="card plan">
+        <div class="tier">Website care plan</div>
+        <div class="amt">$147<span> /mo</span></div>
+        <div class="was">Hosting and upkeep so the site never goes stale</div>
+        <ul class="list">
+          <li>Hosting, domain renewal and security included</li>
+          <li>Unlimited small content edits</li>
+          <li>Uptime monitoring and monthly check-in</li>
+          <li>Priority support line</li>
+        </ul>
+      </div>
+      <div class="card plan">
+        <div class="tier">Meta ads management</div>
+        <div class="amt">$447<span> /mo + ad spend</span></div>
+        <div class="was">You keep your own ad account; we run it</div>
+        <ul class="list">
+          <li>Campaign setup, targeting and creative</li>
+          <li>Weekly optimization</li>
+          <li>Leads tracked straight to your calendar</li>
+          <li>Monthly performance report</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">Bundle any of the above with Front Desk and we waive the $997 receptionist setup fee. Founding rates are locked in for as long as you stay with us.</p>
     <div class="grid2">
       <div class="card">
         <h3>Who it is for</h3>
