@@ -86,11 +86,11 @@ input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-o
 .note{color:var(--muted);font-size:14px;margin:0 0 26px}
 .hero{position:relative;overflow:hidden}
 .hero .wrap{position:relative;z-index:1}
-.hero-bg{position:absolute;inset:0;pointer-events:none}
+.hero-bg{position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(to bottom,#000 50%,transparent);mask-image:linear-gradient(to bottom,#000 50%,transparent)}
 .glow{position:absolute;width:520px;height:520px;border-radius:50%;filter:blur(90px)}
 .glow.g1{background:var(--brand);opacity:.2;top:-200px;right:-80px;animation:drift 16s ease-in-out infinite alternate}
 .glow.g2{background:var(--accent);opacity:.09;bottom:-280px;left:-140px;animation:drift 20s ease-in-out infinite alternate-reverse}
-.waves{position:absolute;left:0;bottom:0;width:200%;height:170px}
+.waves{position:absolute;left:0;bottom:50px;width:200%;height:170px}
 .waves path{fill:none;stroke:var(--brand);stroke-width:1.5;vector-effect:non-scaling-stroke}
 .waves .w1{opacity:.4;animation:slide 14s linear infinite}
 .waves .w2{opacity:.22;animation:slide 22s linear infinite}
