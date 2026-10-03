@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nexa Lead | AI Receptionist and Lead Follow-Up for Wichita Businesses</title>
+<meta name="description" content="Nexa Lead answers your calls and texts, follows up with every lead in seconds, and books jobs for local home-service businesses in Wichita, KS.">
+<meta name="theme-color" content="#0f1512">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<style>
+:root{
+  --bg:#0f1512;--bg2:#121a16;--card:#17201b;--line:#27352d;
+  --ink:#eaf1ec;--muted:#9bb0a3;--brand:#2fbf86;--brand-ink:#06150e;--accent:#f2b134;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:dark}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.nav{position:sticky;top:0;z-index:10;background:rgba(15,21,18,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.14em;font-size:18px;text-decoration:none}
+.logo img{height:36px;width:auto;display:block}
+.logo b{color:#fff;font-weight:800}
+.logo span{color:var(--brand)}
+.nav a.cta{background:var(--brand);color:var(--brand-ink);padding:10px 16px;border-radius:10px;font-weight:700;text-decoration:none;font-size:14px}
+.links{display:flex;gap:20px;align-items:center}
+.links a.t{color:var(--muted);text-decoration:none;font-size:14px}
+.links a.t:hover{color:var(--ink)}
+@media(max-width:700px){.links a.t{display:none}}
+.hero{padding:76px 0 56px;background:radial-gradient(900px 380px at 70% -10%,rgba(47,191,134,.16),transparent 60%)}
+.eyebrow{display:inline-block;border:1px solid var(--line);color:var(--accent);padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:18px}
+h1{font-size:clamp(34px,6.4vw,58px);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;max-width:780px}
+h1 em{font-style:normal;color:var(--brand)}
+.lead{color:var(--muted);font-size:19px;max-width:620px;margin:0 0 26px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 22px;border-radius:12px;font-weight:700;text-decoration:none;font-size:16px;border:1px solid var(--brand);background:var(--brand);color:var(--brand-ink);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.trust{display:flex;gap:18px;flex-wrap:wrap;margin-top:26px;color:var(--muted);font-size:14px}
+.trust span::before{content:"\2713\00a0";color:var(--brand);font-weight:700}
+section{padding:60px 0}
+section.alt{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+h2{font-size:clamp(26px,4.4vw,36px);letter-spacing:-.02em;margin:0 0 10px}
+.sec-sub{color:var(--muted);max-width:640px;margin:0 0 30px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:820px){.grid3{grid-template-columns:1fr}.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+.card h3{margin:0 0 6px;font-size:18px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+.icon{width:38px;height:38px;border-radius:10px;background:rgba(47,191,134,.14);color:var(--brand);display:grid;place-items:center;font-weight:800;margin-bottom:12px}
+.card.hot{border-color:var(--brand);box-shadow:0 0 0 1px var(--brand)}
+.badge{display:inline-block;background:var(--accent);color:#1b1500;font-size:12px;font-weight:800;padding:3px 9px;border-radius:999px;margin-bottom:10px}
+.step{display:flex;gap:14px}
+.num{flex:none;width:34px;height:34px;border-radius:50%;background:var(--accent);color:#1b1500;font-weight:900;display:grid;place-items:center}
+.step h3{margin:0 0 4px;font-size:17px}
+.step p{margin:0;color:var(--muted);font-size:15px}
+.steps{display:grid;gap:22px;max-width:640px}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--muted);margin:10px 0 0;font-size:15px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+@media(max-width:820px){.contact{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:600;margin:12px 0 4px}
+input,select,textarea{width:100%;padding:12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);font:inherit}
+textarea{min-height:90px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--brand);outline-offset:1px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.row{grid-template-columns:1fr}}
+.msg{margin-top:14px;padding:12px 14px;border-radius:10px;border:1px solid var(--brand);font-size:14px}
+.msg.err{border-color:#ff8a80;color:#ff8a80}
+.hidden{display:none}
+.hp{position:absolute;left:-9999px}
+.list{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.list li{color:var(--muted)}
+.list li b{color:var(--ink)}
+footer{border-top:1px solid var(--line);padding:30px 0 44px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="Nexa Lead home"><img src="assets/logo-mark.png" alt=""><span>NEXA</span> <b>LEAD</b></a>
+    <div class="links">
+      <a class="t" href="#services">Services</a>
+      <a class="t" href="#how">How it works</a>
+      <a class="t" href="#faq">FAQ</a>
+      <a class="cta" href="#contact">Book a free call</a>
+    </div>
+  </div>
+</div>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <span class="eyebrow">Built for Wichita home-service businesses</span>
+    <h1>Stop losing jobs to <em>missed calls</em> and slow replies.</h1>
+    <p class="lead">Nexa Lead answers your calls and texts around the clock, follows up with every new lead in seconds, and puts booked jobs on your calendar. You stay on the job site.</p>
+    <div class="btns">
+      <a class="btn" href="#contact">Get my free missed-call check</a>
+      <a class="btn ghost" href="#services">See what we do</a>
+    </div>
+    <div class="trust">
+      <span>Local to Wichita</span>
+      <span>No long contracts</span>
+      <span>Set up for you</span>
+    </div>
+  </div>
+</header>
+
+<section id="problem">
+  <div class="wrap">
+    <h2>Every missed call is a customer who calls the next company.</h2>
+    <p class="sec-sub">Roofers, HVAC techs, plumbers, and electricians are on a ladder or under a house when the phone rings. The customer does not leave a voicemail. They call someone else.</p>
+    <div class="grid3">
+      <div class="card"><div class="icon">1</div><h3>Calls go unanswered</h3><p>You cannot pick up while working, so jobs go to whoever answers first.</p></div>
+      <div class="card"><div class="icon">2</div><h3>Leads get cold</h3><p>Web forms, ads, and Google leads sit for hours. The slow reply loses the job.</p></div>
+      <div class="card"><div class="icon">3</div><h3>Past customers fade</h3><p>Old quotes and past clients are never followed up with, so that money is left on the table.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <h2>What we set up for you</h2>
+    <p class="sec-sub">One system to answer, follow up, and book. Start with the front desk and add more as you grow.</p>
+    <div class="grid3">
+      <div class="card hot"><span class="badge">MOST POPULAR</span><h3>AI Front Desk</h3><p>An AI receptionist answers every call and text, answers common questions, collects job details, and books appointments on your calendar.</p></div>
+      <div class="card"><div class="icon">&#9889;</div><h3>Instant Lead Follow-Up</h3><p>New lead from a form, ad, or call? They get a text within seconds and a follow-up sequence until they reply.</p></div>
+      <div class="card"><div class="icon">&#9733;</div><h3>Google Review Automation</h3><p>After each job, customers get a simple request to leave a review. More reviews help you show up and win trust.</p></div>
+      <div class="card"><div class="icon">&#8635;</div><h3>Lead Reactivation</h3><p>We reach out to old quotes and past customers with a friendly message to bring back jobs you thought were lost.</p></div>
+      <div class="card"><div class="icon">&#9776;</div><h3>Websites</h3><p>A clean, fast website built to turn visitors into calls and form submissions, with optional monthly care.</p></div>
+      <div class="card"><div class="icon">&#9654;</div><h3>Meta Ads Management</h3><p>Facebook and Instagram ads that send local homeowners straight into your follow-up system.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <p class="sec-sub">Simple to start, and we do the heavy lifting.</p>
+    <div class="steps">
+      <div class="step"><div class="num">1</div><div><h3>Free missed-call check</h3><p>We look at how your business handles calls and new leads today and show you where jobs are slipping away.</p></div></div>
+      <div class="step"><div class="num">2</div><div><h3>We build and connect it</h3><p>We set up the AI front desk, your texts, and your calendar. You approve the wording before anything goes live.</p></div></div>
+      <div class="step"><div class="num">3</div><div><h3>Jobs get booked</h3><p>Calls and leads are answered right away. You see appointments land on your calendar and adjust anything as you go.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Founding Wichita client pricing</h2>
+    <p class="sec-sub">We are opening a small number of spots at lower founding rates for local businesses. Book a call and we will give you the exact numbers for your trade.</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>Who it is for</h3>
+        <ul class="list" style="margin-top:12px">
+          <li><b>Roofing</b> and exterior contractors</li>
+          <li><b>HVAC</b>, plumbing, and electrical companies</li>
+          <li><b>Other local service businesses</b> that live on phone calls</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>What founding clients get</h3>
+        <ul class="list" style="margin-top:12px">
+          <li><b>Lower rates</b> than our standard pricing</li>
+          <li><b>Hands-on setup</b> directly with the owner</li>
+          <li><b>Direct input</b> on how the system is built</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <p class="sec-sub">Straight answers.</p>
+    <details><summary>Will the AI sound robotic to my customers?</summary><p>You hear and approve how it talks before it goes live. It is built to answer simple questions, collect details, and book the job, and to hand off to you for anything complicated.</p></details>
+    <details><summary>Do I need to change my phone number?</summary><p>No. We set it up so your current number keeps working, and the system picks up the calls you miss.</p></details>
+    <details><summary>How fast can it be running?</summary><p>Setup time depends on your business and tools. We will give you a clear timeline on the free call.</p></details>
+    <details><summary>Am I locked into a contract?</summary><p>We keep terms simple and will go over them on the call so you know exactly what you are signing up for.</p></details>
+    <details><summary>Do you guarantee results?</summary><p>We do not promise a specific number of jobs, because that depends on your market and how quickly you respond. We do promise that no call or lead goes unanswered while you are busy.</p></details>
+  </div>
+</section>
+
+<section id="contact" class="alt">
+  <div class="wrap contact">
+    <div>
+      <h2>Get your free missed-call check</h2>
+      <p class="sec-sub">Tell us about your business and we will reach out to set up a short call. No pressure, no obligation.</p>
+      <ul class="list">
+        <li><b>Phone:</b> <a href="tel:+1YOURNUMBER">YOUR PHONE NUMBER</a></li>
+        <li><b>Email:</b> <a href="mailto:you@nexalead.com">you@nexalead.com</a></li>
+        <li><b>Based in:</b> Wichita, Kansas</li>
+      </ul>
+    </div>
+    <form class="card" id="form" novalidate>
+      <input class="hp" type="text" name="company_website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <div class="row">
+        <div><label for="f_name">Your name</label><input id="f_name" name="name" autocomplete="name" required></div>
+        <div><label for="f_biz">Business name</label><input id="f_biz" name="business" required></div>
+      </div>
+      <div class="row">
+        <div><label for="f_phone">Phone</label><input id="f_phone" name="phone" type="tel" autocomplete="tel" required></div>
+        <div><label for="f_trade">Type of business</label>
+          <select id="f_trade" name="trade">
+            <option>Roofing</option><option>HVAC</option><option>Plumbing</option><option>Electrical</option><option>Landscaping</option><option>Other</option>
+          </select></div>
+      </div>
+      <label for="f_msg">Anything we should know? (optional)</label>
+      <textarea id="f_msg" name="message"></textarea>
+      <button class="btn" style="width:100%;margin-top:16px" type="submit" id="f_btn">Request my free check</button>
+      <div id="f_out"></div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div style="display:flex;align-items:center;gap:10px"><img src="assets/logo-mark.png" alt="Nexa Lead" style="height:30px;width:auto"><span>&copy; <span id="yr"></span> Nexa Lead. Wichita, KS.</span></div>
+    <div><a href="privacy.html">Privacy Policy</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+
+  /* SETUP: paste your Formspree endpoint here (https://formspree.io/f/xxxx) to receive submissions by email.
+     If left as is, the form opens an email draft instead. */
+  var FORM_ENDPOINT='';
+  var FALLBACK_EMAIL='you@nexalead.com';
+
+  var form=document.getElementById('form'),out=document.getElementById('f_out'),btn=document.getElementById('f_btn');
+  function show(ok,t){out.innerHTML='';var d=document.createElement('div');d.className='msg'+(ok?'':' err');d.textContent=t;out.appendChild(d)}
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var fd=new FormData(form);
+    if(fd.get('company_website')){return}
+    var name=(fd.get('name')||'').trim(),biz=(fd.get('business')||'').trim(),phone=(fd.get('phone')||'').trim();
+    if(!name||!biz||!phone){return show(false,'Please add your name, business, and phone number.')}
+    if(FORM_ENDPOINT){
+      btn.disabled=true;
+      fetch(FORM_ENDPOINT,{method:'POST',body:fd,headers:{'Accept':'application/json'}})
+        .then(function(r){if(!r.ok)throw 0;show(true,'Thanks, '+name+'. We will reach out shortly.');form.reset()})
+        .catch(function(){show(false,'Something went wrong. Please call or email us directly.')})
+        .then(function(){btn.disabled=false});
+    }else{
+      var body='Name: '+name+'\nBusiness: '+biz+'\nPhone: '+phone+'\nType: '+fd.get('trade')+'\n\n'+(fd.get('message')||'');
+      window.location.href='mailto:'+FALLBACK_EMAIL+'?subject='+encodeURIComponent('Free missed-call check: '+biz)+'&body='+encodeURIComponent(body);
+      show(true,'Your email app should open with your request ready to send.');
+    }
+  });
+})();
+</script>
+</body>
+</html>
