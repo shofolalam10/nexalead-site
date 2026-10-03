@@ -157,7 +157,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
     <h1>Stop losing jobs to <em>missed calls</em> and slow replies.</h1>
     <p class="lead">Nexa Lead answers your calls and texts around the clock, follows up with every new lead in seconds, and puts booked jobs on your calendar. You stay on the job site.</p>
     <div class="btns">
-      <a class="btn" href="#contact">Get my free missed-call check</a>
+      <a class="btn" href="#contact">Book a free call</a>
       <a class="btn ghost" href="#services">See what we do</a>
     </div>
     <div class="trust">
@@ -212,7 +212,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
     <h2>How it works</h2>
     <p class="sec-sub">Simple to start, and we do the heavy lifting.</p>
     <div class="steps">
-      <div class="step"><div class="num">1</div><div><h3>Free missed-call check</h3><p>We look at how your business handles calls and new leads today and show you where jobs are slipping away.</p></div></div>
+      <div class="step"><div class="num">1</div><div><h3>Book a free call</h3><p>We look at how your business handles calls and new leads today and show you where jobs are slipping away.</p></div></div>
       <div class="step"><div class="num">2</div><div><h3>We build and connect it</h3><p>We set up the AI front desk, your texts, and your calendar. You approve the wording before anything goes live.</p></div></div>
       <div class="step"><div class="num">3</div><div><h3>Jobs get booked</h3><p>Calls and leads are answered right away. You see appointments land on your calendar and adjust anything as you go.</p></div></div>
     </div>
@@ -308,7 +308,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 <section id="contact" class="alt">
   <div class="wrap contact">
     <div>
-      <h2>Get your free missed-call check</h2>
+      <h2>Book a call for more information</h2>
       <p class="sec-sub">Tell us about your business and we will reach out to set up a short call. No pressure, no obligation.</p>
       <ul class="list">
         <li><b>Phone:</b> <a href="tel:+1YOURNUMBER">YOUR PHONE NUMBER</a></li>
@@ -331,7 +331,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
       </div>
       <label for="f_msg">Anything we should know? (optional)</label>
       <textarea id="f_msg" name="message"></textarea>
-      <button class="btn" style="width:100%;margin-top:16px" type="submit" id="f_btn">Request my free check</button>
+      <button class="btn" style="width:100%;margin-top:16px" type="submit" id="f_btn">Book my free call</button>
       <div id="f_out"></div>
     </form>
   </div>
@@ -370,7 +370,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
         .then(function(){btn.disabled=false});
     }else{
       var body='Name: '+name+'\nBusiness: '+biz+'\nPhone: '+phone+'\nType: '+fd.get('trade')+'\n\n'+(fd.get('message')||'');
-      window.location.href='mailto:'+FALLBACK_EMAIL+'?subject='+encodeURIComponent('Free missed-call check: '+biz)+'&body='+encodeURIComponent(body);
+      window.location.href='mailto:'+FALLBACK_EMAIL+'?subject='+encodeURIComponent('Call request: '+biz)+'&body='+encodeURIComponent(body);
       show(true,'Your email app should open with your request ready to send.');
     }
   });
