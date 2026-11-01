@@ -11,8 +11,8 @@
 <meta property="og:description" content="We build and run the systems that capture every lead, book more jobs, and take busywork off your plate.">
 <meta name="twitter:card" content="summary">
 <link rel="icon" type="image/png" href="assets/favicon-blue.png">
-<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/figtree-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/manrope-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
@@ -57,6 +57,7 @@
 <main id="main">
 <span id="top"></span>
 <section class="hero">
+  <canvas class="hex-bg" data-tone="light" data-size="38" aria-hidden="true"></canvas>
   <div class="wrap">
     <div>
       <h1>Grow your business without adding staff.</h1>
@@ -148,7 +149,8 @@
   </div>
 </section>
 
-<section class="sec fog">
+<section class="sec fog hexed">
+  <canvas class="hex-bg" data-tone="light" data-size="30" aria-hidden="true"></canvas>
   <div class="wrap">
     <div class="head">
       <h2>Why local business owners choose Nexa Lead</h2>
@@ -436,6 +438,7 @@
 <section class="sec" style="padding-top:0">
   <div class="wrap">
     <div class="final">
+      <canvas class="hex-bg" data-tone="dark" data-size="30" aria-hidden="true"></canvas>
       <h2>Grow without the extra work</h2>
       <p>Book a short call and we will show you where your business is losing leads and time.</p>
       <div class="btns"><a class="btn on-navy" href="#contact">Book a call</a><a class="btn line on-navy" href="#pricing">View pricing</a></div>
@@ -486,6 +489,7 @@
   </div>
 </footer>
 
+<script src="assets/honeycomb.js" defer></script>
 <script src="assets/app.js" defer></script>
 <script src="assets/form.js" defer></script>
 </body>
