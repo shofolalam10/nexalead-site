@@ -1,6 +1,6 @@
 /* Nexa Lead site styles. Shared by index, contact and privacy. */
-@font-face{font-family:"Bricolage Grotesque";src:url("fonts/bricolage-grotesque-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
-@font-face{font-family:"Figtree";src:url("fonts/figtree-latin-wght-normal.woff2") format("woff2");font-weight:300 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("fonts/manrope-latin-wght-normal.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+@font-face{font-family:"Inter";src:url("fonts/inter-latin-wght-normal.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
 
 :root{
   --paper:#ffffff;--fog:#f4f7fc;--line:#dbe3f0;
@@ -10,13 +10,13 @@
   --live:#0f9d63;--live-ink:#0a7048;--live-t:#dcf7e9;
   --err:#b42318;--err-t:#fdecea;
   --r-xl:28px;--r-lg:20px;--r-md:12px;--r-sm:8px;
-  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
-  --text:"Figtree","Segoe UI",system-ui,-apple-system,sans-serif;
+  --head:"Manrope","Segoe UI",system-ui,sans-serif;
+  --text:"Inter","Segoe UI",system-ui,-apple-system,sans-serif;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:88px;background:var(--paper)}
-body{margin:0;background:var(--paper);color:var(--body);font-family:var(--text);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
-h1,h2,h3,h4{font-family:var(--head);color:var(--ink);margin:0;font-weight:700;letter-spacing:-.025em;line-height:1.08}
+body{margin:0;background:var(--paper);color:var(--body);font-family:var(--text);font-size:16.5px;line-height:1.65;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+h1,h2,h3,h4{font-family:var(--head);color:var(--ink);margin:0;font-weight:700;letter-spacing:-.03em;line-height:1.1}
 p{margin:0}
 a{color:inherit}
 img,svg{max-width:100%}
@@ -77,7 +77,7 @@ ul{margin:0;padding:0}
 .sec.fog{background:var(--fog)}
 @media(max-width:700px){.sec{padding:64px 0}}
 .head{max-width:680px;margin-bottom:44px}
-.head h2{font-size:clamp(32px,4.4vw,48px);margin-bottom:14px}
+.head h2{font-size:clamp(30px,3.9vw,44px);margin-bottom:14px}
 .head p{font-size:19px}
 .head.flush{margin-bottom:0}
 
@@ -85,7 +85,7 @@ ul{margin:0;padding:0}
 .hero{padding:64px 0 72px;background:var(--paper)}
 .hero .wrap{display:grid;grid-template-columns:1fr 1.08fr;gap:56px;align-items:center}
 @media(max-width:980px){.hero .wrap{grid-template-columns:1fr;gap:44px}.hero{padding:44px 0 56px}}
-h1{font-size:clamp(40px,5.2vw,66px);font-weight:800;letter-spacing:-.04em;line-height:1;margin-bottom:22px;max-width:640px}
+h1{font-size:clamp(36px,4.6vw,60px);font-weight:800;letter-spacing:-.04em;line-height:1.04;margin-bottom:22px;max-width:640px}
 .hero .lead{font-size:20px;max-width:540px;margin-bottom:30px}
 .btns{display:flex;gap:12px;flex-wrap:wrap}
 .assure{display:flex;flex-wrap:wrap;gap:8px 22px;margin:26px 0 0;padding:0;list-style:none;font-size:15.5px;color:var(--muted)}
@@ -144,7 +144,8 @@ h1{font-size:clamp(40px,5.2vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 .pillar:last-child{border-right:0}
 @media(max-width:980px){.pillar{border-bottom:1px solid var(--line)}.pillar:nth-child(2n){border-right:0}.pillar:nth-last-child(-n+2){border-bottom:0}}
 @media(max-width:600px){.pillar{border-right:0;border-bottom:1px solid var(--line)}.pillar:last-child{border-bottom:0}.pillar:nth-last-child(2){border-bottom:1px solid var(--line)}}
-.pillar .ic{width:48px;height:48px;border-radius:var(--r-md);background:var(--fog);color:var(--blue);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
+.hexi,.pillar .ic,.sup .ic{clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);border-radius:0}
+.pillar .ic{width:56px;height:62px;background:var(--blue-t);color:var(--blue-d);display:grid;place-items:center;font-size:24px;margin-bottom:18px}
 .pillar h3{font-size:23px;margin-bottom:8px}
 .pillar>p{font-size:16px;margin-bottom:16px}
 .pillar ul{list-style:none;margin:0 0 20px;display:grid;gap:8px;flex:1;align-content:start}
@@ -231,7 +232,7 @@ h1{font-size:clamp(40px,5.2vw,66px);font-weight:800;letter-spacing:-.04em;line-h
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:2px solid var(--ink)}
 @media(max-width:860px){.steps{grid-template-columns:1fr}}
 .step{padding:28px 28px 8px 0}
-.step .n{font:800 44px/1 var(--head);color:var(--blue);margin-bottom:14px;letter-spacing:-.04em}
+.step .n{width:60px;height:68px;display:grid;place-items:center;clip-path:polygon(50% 0,100% 25%,100% 75%,50% 100%,0 75%,0 25%);background:var(--blue);color:#fff;font:800 24px/1 var(--head);margin-bottom:18px}
 .step h3{font-size:23px;margin-bottom:8px}
 @media(min-width:861px){.step+.step{padding-left:28px;border-left:1px solid var(--line)}}
 
@@ -272,7 +273,7 @@ td.us{background:#f4f8ff;color:var(--blue-d);font-weight:700}
 .pop-tag{position:absolute;top:30px;right:28px;font-size:13.5px;font-weight:700;background:var(--live-t);color:var(--live-ink);padding:4px 12px;border-radius:var(--r-sm)}
 .plan h3{font-size:25px}
 .plan .for{font-size:16.5px;margin:6px 0 22px}
-.price{font:800 54px/1 var(--head);letter-spacing:-.045em;color:var(--ink)}
+.price{font:800 48px/1 var(--head);letter-spacing:-.04em;color:var(--ink)}
 .price small{font:600 17px var(--text);letter-spacing:0;opacity:.75}
 .setup{font-size:15.5px;margin:10px 0 24px;opacity:.9}
 .plan .ticks{flex:1}
@@ -282,7 +283,7 @@ td.us{background:#f4f8ff;color:var(--blue-d);font-weight:700}
 .support{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 @media(max-width:860px){.support{grid-template-columns:1fr}}
 .sup{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);padding:28px}
-.sup .ic{margin-bottom:16px;width:46px;height:46px;font-size:22px}
+.sup .ic{margin-bottom:16px;width:52px;height:58px;font-size:22px}
 .sup h3{font-size:21px;margin-bottom:8px}
 
 /* faq */
@@ -290,7 +291,7 @@ td.us{background:#f4f8ff;color:var(--blue-d);font-weight:700}
 @media(max-width:900px){.faq-wrap{grid-template-columns:1fr;gap:28px}}
 .faq-tabs{display:flex;gap:8px;margin-bottom:12px;flex-wrap:wrap}
 details{border-bottom:1px solid var(--line);padding:20px 0}
-summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font:700 19px/1.3 var(--head);letter-spacing:-.01em;color:var(--ink)}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;font:700 18px/1.35 var(--head);letter-spacing:-.015em;color:var(--ink)}
 summary::-webkit-details-marker{display:none}
 summary::after{content:"+";font-size:26px;line-height:1;color:var(--blue-d);font-weight:500}
 details[open] summary::after{content:"\2212"}
@@ -362,3 +363,16 @@ footer a.fl:hover{color:#fff;text-decoration:underline}
 
 /* table row headers */
 tbody th{color:var(--ink);font-weight:600;font-size:inherit;background:transparent;font-family:var(--text);letter-spacing:0}
+
+/* honeycomb background */
+.hex-bg{position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;z-index:0}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero .hex-bg{-webkit-mask-image:radial-gradient(ellipse 90% 100% at 58% 42%,#000 0%,rgba(0,0,0,.6) 50%,transparent 88%);mask-image:radial-gradient(ellipse 90% 100% at 58% 42%,#000 0%,rgba(0,0,0,.6) 50%,transparent 88%)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(to bottom,rgba(255,255,255,0),var(--paper));pointer-events:none;z-index:0}
+.final::before{display:none}
+.final>canvas.hex-bg{position:absolute;-webkit-mask-image:radial-gradient(ellipse 85% 130% at 88% 50%,#000 0%,rgba(0,0,0,.5) 45%,transparent 80%);mask-image:radial-gradient(ellipse 85% 130% at 88% 50%,#000 0%,rgba(0,0,0,.5) 45%,transparent 80%)}
+.sec.fog.hexed{position:relative;overflow:hidden}
+.sec.fog.hexed>.wrap{position:relative;z-index:1}
+.sec.fog.hexed>.hex-bg{-webkit-mask-image:radial-gradient(ellipse 60% 90% at 100% 0%,#000 0%,transparent 75%);mask-image:radial-gradient(ellipse 60% 90% at 100% 0%,#000 0%,transparent 75%)}
+@media (max-width:700px){.hero .hex-bg{opacity:.55}}
